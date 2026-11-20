@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>FMZ Studio OS — TikTok</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header><div class="logo">FMZ</div><h1>Connecting TikTok…</h1></header>
+  <p class="muted">This page sends TikTok's answer back to FMZ Studio OS on the owner's computer.</p>
+  <script>
+    var q = location.search;
+    if (q && /[?&](code|error)=/.test(q)) location.replace('http://localhost:4820/api/tiktok/callback' + q);
+  </script>
+</div>
+</body>
+</html>
